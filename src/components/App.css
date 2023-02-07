@@ -1,18 +1,45 @@
-.App {
+.cardProducto {
+  width: 18rem;
+  margin: 4px;
+  background-color: hsl(0, 0%, 97%);
+}
+
+.cardBody {
+  background-color: white;
+  text-align: center;
+  height: 150px;
+}
+
+.imgProd {
+  margin-top: 3px;
+  height: 331px;
+}
+
+.imgbox{
+  background-color: white;
+  text-align: center;
+  height: 331px;
+}
+.cardProductos {
+  margin:4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemDetail {
+  max-width: 840px;
+  margin-top: 20px;
+}
+
+.buildingBox {
+  width: 36rem;
+  margin: 0 auto;
+  margin-top: 50px;
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.divColor {
-  background-color: aqua;
+.bottonBox{
+  background-color: white;
+  margin-bottom: 3px;
+  text-align: center;
 }

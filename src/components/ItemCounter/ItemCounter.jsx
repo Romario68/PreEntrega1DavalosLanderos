@@ -7,9 +7,9 @@ export const ItemCounter = ({valMin, valStock}) => {
 
     return (
     <>
-        <button className="btn btn-dark" onClick={() => addItem()}>+</button>
-        &nbsp;{ItemCounter}&nbsp;
         <button className="btn btn-dark" onClick={() => subItem()}>-</button>
+        &nbsp;{ItemCounter}&nbsp;
+        <button className="btn btn-dark" onClick={() => addItem()}>+</button>
     </>
     )
 }

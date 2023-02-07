@@ -1,23 +1,21 @@
+import { Link } from "react-router-dom";
 import Categories from "../Categories/Categories";
 
 const Sections = () => {
     return (
         <>
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#"><button className="btn btn-dark">Home</button></a>
+                <Link className="nav-link" to={"/"} ><button className="btn btn-dark">Home</button></Link>
             </li>
             <Categories/>
             <li className="nav-item">
-                <a className="nav-link" href="#"><button className="btn btn-dark">Ebooks</button></a>
+                <Link className="nav-link" to={"/music"} ><button className="btn btn-dark">Music</button></Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#"><button className="btn btn-dark">Audio books</button></a>
+                <Link className="nav-link" to={"/movies"} ><button className="btn btn-dark">Movies</button></Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#"><button className="btn btn-dark">Gift cards</button></a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#"><button className="btn btn-dark">Music & movies</button></a>
+                <Link className="nav-link" to={"/contact"} ><button className="btn btn-dark">Contact</button></Link>
             </li>
         </>
     );

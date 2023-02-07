@@ -1,6 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
 import Sections from "./Sections/Sections";
-import Categories from "./Categories/Categories";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -11,7 +11,7 @@ const Navbar = () => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <Sections/>
                     </ul>
-                    <CartWidget/>
+                    <Link className="nav-link" to={"/cart"} ><CartWidget/></Link>
                 </div>
             </div>
         </nav>
