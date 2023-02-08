@@ -8,7 +8,7 @@ import ItemDetailContainer from "./ItemDetailContainer/ItemDetailContainer";
 import UnderConstruction from "./UnderConstruction/UnderConstruction";
 import Music from "./Music/Music";
 import Movies from "./Movies/Movies";
-import {Contact} from "./Contact/Contact";
+import Contact from "./Contact/Contact";
 
 const App = () => {
   return (

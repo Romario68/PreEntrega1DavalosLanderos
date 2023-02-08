@@ -4,7 +4,7 @@ const ItemDetail = ({item}) => {
   return (
     <div className='row g-0'>
         <div className="col-md-4">
-            <img src={`../img/${item.Image}`} className="img-fluid rounded-start" style={{marginTop:"20px"}} alt={`${item.Title}`} />
+            <img src={`../img/${item.Image}`} className="img-fluid rounded-start marginSup" alt={`${item.Title}`} />
         </div>
         <div className="col-md-8">
             <div className="card-body">

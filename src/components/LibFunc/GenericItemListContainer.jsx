@@ -1,7 +1,7 @@
 import ItemList from '../ItemList/ItemList'
 import { useState } from 'react'
 
-function GenericItemListContainer(categoryName){
+const GenericItemListContainer = (categoryName)=>{
     const [productos, setProductos] = useState([])
     const Opciones = new Map();
     Opciones.set('fiction',1);
@@ -40,7 +40,9 @@ function GenericItemListContainer(categoryName){
         }
         )
     }
-    return (productos);
+    return (
+        <>{productos}</>
+        );
 }
 
 export {GenericItemListContainer};

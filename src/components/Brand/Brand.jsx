@@ -1,5 +1,4 @@
 import logo from './knowledgetree_logo.png';
-import './Brand.css';
 
 const HeaderPage = () => {
 

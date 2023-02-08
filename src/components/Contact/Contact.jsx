@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export const Contact = () => {
+const Contact = () => {
     const formData = React.useRef() 
     let navigate = useNavigate() 
     const consultForm = (e) => {
@@ -13,7 +13,7 @@ export const Contact = () => {
         navigate("/")
     }
   return (
-    <div className="container" style={{marginTop:"20px", marginBottom: "20px", width:"500px", border:"1px solid", borderRadius: "5px"}}>
+    <div className="container contactContainer">
         <form onSubmit={consultForm} ref={formData}>
         <div className="mb-3">
             <label htmlFor="FirstName" className="form-label">First name</label>
@@ -35,10 +35,12 @@ export const Contact = () => {
             <label htmlFor="comment" className="form-label">Comment</label>
             <textarea className="form-control" name="comment" rows={3} defaultValue={""} />
         </div>
-        <div className="mb-3" style={{textAlign:"center"}}>
+        <div className="mb-3 bottonBox">
             <button type="submit" className="btn btn-dark">Send</button>
         </div>
         </form>
     </div>
   )
 }
+
+export default Contact;
