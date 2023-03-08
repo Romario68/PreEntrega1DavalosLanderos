@@ -1,8 +1,8 @@
-import CartWidget from "../CartWidget/CartWidget";
-import Sections from "./Sections/Sections";
+import {CartWidget} from "../CartWidget/CartWidget";
+import {Sections} from "./Sections/Sections";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export const NavBar = () => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -11,11 +11,9 @@ const Navbar = () => {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <Sections/>
                     </ul>
-                    <Link className="nav-link" to={"/cart"} ><CartWidget/></Link>
+                    <Link className="nav-link" to={"/cart"} ><CartWidget qty={5}/></Link>
                 </div>
             </div>
         </nav>
     );
 }
-
-export default Navbar;

@@ -1,8 +1,9 @@
 import {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import ItemList from '../ItemList/ItemList'
+import { getProducts } from '../../firebase/firebase'
+import {ItemList} from '../ItemList/ItemList'
 
-const ItemListContainer = () => {
+export const ItemListContainer = () => {
     const [productos, setProductos] = useState([])
     const {categoryName} = useParams()
     
@@ -19,19 +20,17 @@ const ItemListContainer = () => {
         let idCategoria = Opciones.get(categoryName);
 
         if(categoryName){
-            fetch("../json/productos.json")
-            .then(response => response.json())
+            getProducts()
             .then(items => {
                 const products = items.filter(prod => prod.idCategoria === parseInt(idCategoria))
-                const productsList = ItemList({products})
+                const productsList = <ItemList products={products} template={'item'}/>
                 setProductos(productsList)
             })
         }
         else{
-            fetch("../json/productos.json")
-            .then(response => response.json())
+            getProducts()
             .then(products => {
-                const productsList = ItemList({products})
+                const productsList = <ItemList products={products} template={'item'}/>
                 setProductos(productsList)
             })
         }
@@ -42,5 +41,3 @@ const ItemListContainer = () => {
         </div>
     );
 }
-
-export default ItemListContainer;

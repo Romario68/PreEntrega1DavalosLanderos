@@ -1,6 +1,7 @@
 import logo from './knowledgetree_logo.png';
+import './Brand.css';
 
-const HeaderPage = () => {
+export const Brand = () => {
 
     return (
         <div className="Header-style">
@@ -10,4 +11,3 @@ const HeaderPage = () => {
     );
 }
 
-export default HeaderPage;

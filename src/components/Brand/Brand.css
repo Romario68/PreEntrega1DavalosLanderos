@@ -1,0 +1,13 @@
+.Header-logo {
+    height: 15vmin;
+    width: 15vmin;
+    pointer-events: none;
+  }
+
+.Header-style {
+    background-color: #9ab3e4;
+    align-items: left;
+    justify-content: center;
+    font-size: calc(50px + 2vmin);
+    color: white;
+  }

@@ -1,11 +1,12 @@
-import { GenericItemListContainer } from '../LibFunc/GenericItemListContainer.jsx'
+import {ItemListContainer} from '../ItemListContainer/ItemListContainer.jsx'
+import { useParams } from 'react-router-dom'
 
-const Movies = () => {
+export const Movies = () => {
+    const {categoryName} = useParams()
+
     return (
         <div className="row cardProductos">
-            {GenericItemListContainer("movies")}
+            {<ItemListContainer categoryName={categoryName}/>}
         </div>
     );
 }
-
-export default Movies;

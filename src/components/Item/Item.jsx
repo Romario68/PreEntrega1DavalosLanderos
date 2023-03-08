@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 
-const Item = ({item}) => {
+export const Item = ({item}) => {
     return (
       <div className="card mb-3 cardProducto border-light">
           <div className="imgbox">
-            <img src={`../img/${item.Image}`} className="card-img-top imgProd" alt={`Imagen de ${item.Title}`} />
+            <img src={`${item.Image}`} className="card-img-top imgProd" alt={`Imagen de ${item.Title}`} />
           </div>
           <div className="card-body cardBody">
             <p className="card-title">{item.Title}</p>
@@ -17,5 +17,3 @@ const Item = ({item}) => {
       </div>
     )
   }
-
-  export default Item;
