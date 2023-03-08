@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import {getFirestore, collection, doc, addDoc, getDoc, getDocs, updateDoc, deleteDoc} from 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCclFtDvXAR0y_i66D_Cny8IBVIxWDy1iU",
+  apiKey:process.env.API_KEY,
   authDomain: "knowledgetree-fe84e.firebaseapp.com",
   projectId: "knowledgetree-fe84e",
   storageBucket: "knowledgetree-fe84e.appspot.com",
