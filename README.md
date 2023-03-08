@@ -1,7 +1,7 @@
 # Ecommerce React 39530
 _Este es el proyecto final del curso de REACT impartido en Coderhouse. Es un sitio de ecommerce con el giro de venta de libros, discos y peliculas. La implementacion comprende una funcionalidad basica que incluye mostrar el catalogo de los diferentes productos, ver el detalle de cada uno de ellos, seleccioanrlos para compra, la vista del carrito de compra y la compra en si. Importante comentar que el proyecto es basicamente front-end y las compras, como los mensajes que pudiera hacer un usuario no se registran en alguna base de datos; ese no es el alcance del curso. La informacion de los articulos si esta almacenada en la nube, asi como las imagenes de los mismos.
 
-_ Marzo del 23, JMDL.
+_Marzo del 23, JMDL.
 
 ## Prerequisitos
 _ Es necesario instalar las siguientes dependecias del packaje.json
