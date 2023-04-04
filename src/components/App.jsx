@@ -3,6 +3,7 @@ import './App.css';
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from 'react-toastify';
 import {Brand} from "./Brand/Brand";
+import {Footer} from "./Footer/Footer";
 import {NavBar} from "./NavBar/NavBar";
 import {ItemListContainer} from "./ItemListContainer/ItemListContainer";
 import {ItemDetailContainer} from "./ItemDetailContainer/ItemDetailContainer";
@@ -30,8 +31,10 @@ export const App = () => {
             <Route path='/contact/' element={<Contact/>}/>
             <Route path='/cart/' element={<Cart/>}/>
             <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='*' element={<UnderConstruction/>}/>
           </Routes>
-          <ToastContainer/>
+        <Footer/>
+        <ToastContainer/>
       </CarritoProvider>
       </BrowserRouter>
     </>

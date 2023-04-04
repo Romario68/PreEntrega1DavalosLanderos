@@ -1,0 +1,14 @@
+.Footer-style {
+    font-size: calc(12px);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+    padding: 5px;
+    background-color: #9ab3e4;
+    border-top: 1px solid #ccc;    
+  }

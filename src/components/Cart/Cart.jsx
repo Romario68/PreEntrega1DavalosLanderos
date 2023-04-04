@@ -8,12 +8,14 @@ export const Cart = () =>{
         <>
         {carrito.length===0
             ?
-                <>
+                <div className="container" style={{marginTop:"50px", marginBottom: "20px", width:"500px", border:"1px solid", borderRadius: "5px", textAlign:"center"}}>
                     <h2>Cart empty</h2>
+                    <br/>
                     <Link className="nav-link" to={"/"}>
                         <button className="btn btn-dark" >Continue shopping</button>
                     </Link>
-                </>
+                    <br/>
+                </div>
             :
                 <div className="container cartContainer">
                     {

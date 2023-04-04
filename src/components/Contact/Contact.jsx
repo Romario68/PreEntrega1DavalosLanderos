@@ -7,15 +7,33 @@ export const Contact = () => {
     let navigate = useNavigate() 
     const consultForm = (e) => {
         e.preventDefault()
-        //Se activaran cuando se tenga la parte de grabar a la DB
-        //const dataForm = new FormData(contactData.current) 
-        //const contact = Object.fromEntries(dataForm) 
-        e.target.reset() 
-        toast.success("Gracias!, Su comentario ha sido recibido exitosamente");
-        navigate("/")
+        const datForm = new FormData(contactData.current) 
+        //const contact = Object.fromEntries(datForm) 
+        const msgError = validateForm(datForm)
+        if(msgError!==""){
+            toast.error(msgError)
+        } else {
+            e.target.reset() 
+            toast.success("Thank you! Your comment has been successfully received.");
+            navigate("/")
+        }
     }
+
+    const validateForm=(objform)=>{
+        let msgErr="";
+        const formfields = Object.fromEntries(objform);
+
+        if(formfields.FirstName==='') {msgErr="First name is missing"}
+        else if(formfields.LastName==='') {msgErr="Last name is missing"}
+        else if(formfields.email==='') {msgErr="Email is missing"}
+        else if(formfields.phone==='') {msgErr="Cellphone is missing"}
+        else if(formfields.comment==='') {msgErr="Comment is missing"}
+
+        return msgErr;
+    }
+  
   return (
-    <div className="container" style={{marginTop:"20px", marginBottom: "20px", width:"500px", border:"1px solid", borderRadius: "5px"}}>
+    <div className="container divContact" style={{marginTop:"20px", marginBottom: "20px", width:"500px", border:"1px solid", borderRadius: "5px"}}>
         <form onSubmit={consultForm} ref={contactData}>
         <div className="mb-3">
             <label htmlFor="FirstName" className="form-label">First name</label>
